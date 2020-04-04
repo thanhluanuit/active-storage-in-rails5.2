@@ -10,5 +10,15 @@
   <%= @post.content %>
 </p>
 
+<p>
+  <strong>Images:</strong>
+</p>
+
+<% @post.images.each do |image| %>
+  <%= image_tag image, size: '300x300' %>
+<% end %>
+
+<br>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
