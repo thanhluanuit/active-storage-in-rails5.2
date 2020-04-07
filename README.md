@@ -1,24 +1,13 @@
-# README
+# How to use Active Storage in Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## What'll we do:
+* Introduction about Active Storage.
+* Create a new Rails application and CRUD for Post.
+* Setup Active Storage + Amazon S3 Service
+* Using Active Storage to:
+  * Upload Images for Post
+  * Upload a File (PDF or Video) for Post
+* Conclusion
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+More details in Luanotes.com: https://luanotes.com/blogs/how-to-use-active-storage-to-upload-files-to-s3-on-rails
