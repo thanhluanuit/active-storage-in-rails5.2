@@ -13,10 +13,24 @@
 <p>
   <strong>Images:</strong>
 </p>
-
-<% @post.images.each do |image| %>
-  <%= image_tag image, size: '300x300' %>
+<% if @post.images.attached? %>
+  <% @post.images.each do |image| %>
+    <%= image_tag image.variant(resize: "300x300")%>
+  <% end %>
 <% end %>
+
+<p>
+  <strong>Preview File:</strong>
+</p>
+
+<% if @post.file.blob.video? || @post.file.content_type.start_with?("application/pdf")%>
+  <%= image_tag @post.file.preview(resize: "400x400")  %>
+<% end %>
+
+<p>
+  <strong>Download File:</strong>
+  <%= link_to 'Download', rails_blob_path(@post.file, disposition: "attachment") %>
+</p>
 
 <br>
 
